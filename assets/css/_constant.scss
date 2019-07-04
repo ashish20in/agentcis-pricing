@@ -1,0 +1,76 @@
+@import'variables';
+@import'mixins';
+body {
+    background: $grey-lighter;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.xl-container {
+    max-width: 1403px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.ag-pricing__block {
+    border-radius: 10px;
+    box-shadow: 0 14px 17px 0 rgba(0, 0, 0, 0.07);
+    padding: 4rem 0;
+}
+
+.bg-white {
+    background: $white;
+}
+
+.md-container {
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.btn {
+    @include btn();
+}
+
+.btn-default {
+    @include buttonColor($color: #fff);
+}
+
+.btn-primary {
+    @include buttonColor($primaryButtonColor: $blue-light, $color: $white);
+}
+
+.btn-secondary {
+    @include buttonColor($primaryButtonColor: $secondary-color, $color: $grey-dark);
+}
+
+.btn-green {
+    @include buttonColor($primaryButtonColor: $green-color, $color: $white);
+}
+
+.btn-grey {
+    @include buttonColor($primaryButtonColor: $white, $color: $black);
+}
+
+.btn-transparent {
+    background-color: transparent;
+}
+
+.btn-font-small {
+    font-size: .875rem;
+}
+
+.btn-font-medium {
+    font-size: 1rem;
+}
+
+.btn-font-large {
+    font-size: 1.2rem;
+}
+
+.btn-shadow {
+    box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.22);
+}

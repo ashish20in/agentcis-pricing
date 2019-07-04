@@ -1,0 +1,38 @@
+@mixin buttonColor($primaryButtonColor: $primary-color, $color: $white) {
+    border: 1px solid $primaryButtonColor;
+    background-color: $primaryButtonColor;
+    color: $color;
+    &:hover,
+    &:focus {
+        background-color: darken($primaryButtonColor, 5%);
+        border-color: darken($primaryButtonColor, 5%);
+        color: $color;
+    }
+}
+
+@mixin btn() {
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: .6rem 2rem;
+    position: relative;
+    text-decoration: none;
+    transition: background-color .1s;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &.button-sm {
+        font-size: 1em;
+        padding: 5px 12px;
+    }
+    &.button-xs {
+        font-size: .85em;
+        padding: 0 5px;
+    }
+    &+& {
+        margin-left: 0.5em;
+    }
+}

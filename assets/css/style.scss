@@ -1,0 +1,600 @@
+        @import"constant";
+        @import"mixins";
+        .ag-pricing {
+            padding: 5rem 0;
+        }
+        
+        .toggle-wrapper {
+            width: 88%;
+            .switch {
+                display: inline-block;
+                height: 13px;
+                position: relative;
+                width: 48px;
+                margin-bottom: 0px;
+                input {
+                    display: none;
+                }
+                .slider {
+                    background-color: $grey-medium;
+                    bottom: 0;
+                    cursor: pointer;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transition: .4s;
+                    -webkit-transition: .4s;
+                    -moz-transition: .4s;
+                    -ms-transition: .4s;
+                    -o-transition: .4s;
+                }
+            }
+            .slider:before {
+                background-color: $grey-medium;
+                bottom: -1px;
+                content: "";
+                height: 16px;
+                left: -0px;
+                position: absolute;
+                -webkit-transition: .4s;
+                transition: .4s;
+                width: 16px;
+                border: 3px solid $white;
+                -moz-box-shadow: 0px -1px 16px -2px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px -1px 16px -2px rgba(0, 0, 0, 0.75);
+                -moz-transition: .4s;
+                -ms-transition: .4s;
+                -o-transition: .4s;
+            }
+            input:checked+.slider {
+                background-color: $green;
+            }
+            input:checked+.slider:before {
+                transform: translateX(32px);
+                -webkit-transform: translateX(32px);
+                -moz-transform: translateX(32px);
+                -ms-transform: translateX(32px);
+                -o-transform: translateX(32px);
+                background: $green;
+                -webkit-box-shadow: 0px -1px 16px -2px rgba(22, 145, 75, 1);
+                -moz-box-shadow: 0px -1px 16px -2px rgba(22, 145, 75, 1);
+                box-shadow: 0px -1px 16px -2px rgba(22, 145, 75, 1);
+            }
+            .slider.round {
+                border-radius: 34px;
+            }
+            .slider.round:before {
+                border-radius: 50%;
+            }
+            span {
+                color: $grey-medium;
+                font-weight: 600;
+                padding-right: 10px;
+                display: inline-block;
+            }
+        }
+        
+        .ag-nav-tabs {
+            border: none;
+            width: 100%;
+            padding: 10px 100px;
+            .ag-tabs {
+                display: inline-block;
+                width: 45%;
+                border: 1px solid $blue-light;
+                margin: 0px 20px;
+                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                -moz-border-radius: 15px;
+                -ms-border-radius: 15px;
+                -o-border-radius: 15px;
+                background: $grey-lighter;
+                position: relative;
+                a {
+                    position: absolute;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 999;
+                }
+                .ag-tabs-card {
+                    border-radius: 10px;
+                    .card-head {
+                        color: $black;
+                        margin-left: 0px;
+                        padding: 20px 25px;
+                        margin-bottom: 0px;
+                        border-bottom: 1px solid $blue-light;
+                        border-radius: 15px 15px 0px 0px;
+                        -webkit-border-radius: 15px 15px 0px 0px;
+                        -moz-border-radius: 15px 15px 0px 0px;
+                        -ms-border-radius: 15px 15px 0px 0px;
+                        -o-border-radius: 15px 15px 0px 0px;
+                        li {
+                            strong {
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+                        }
+                        span {
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            border: 2px solid $grey-medium;
+                            padding: 3px 6px;
+                            background: $white;
+                            i {
+                                font-size: 12px;
+                                color: $blue-light;
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                    .card-body {
+                        .list-unstyled {
+                            padding: 25px 0px;
+                            li {
+                                padding-top: 5px;
+                                strong {
+                                    font-weight: $font-weight-bold;
+                                    font-size: 23px;
+                                }
+                            }
+                        }
+                        .badge {
+                            background: lighten($green, 5%);
+                            border-radius: 3px;
+                            -webkit-border-radius: 3px;
+                            -moz-border-radius: 3px;
+                            -ms-border-radius: 3px;
+                            -o-border-radius: 3px;
+                            padding: 5px 10px;
+                            font-weight: $font-weight-bold;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .ag-row-auto {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            padding-left: 0;
+            padding-right: 0;
+            >div {
+                flex: 1 1 auto;
+                min-height: 1px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .col-border {
+                border-right: 1px solid $blue-light;
+            }
+        }
+        
+        .ag-nav-tabs {
+            .active {
+                -webkit-box-shadow: 0px 19px 30px -20px rgba(107, 104, 107, 1);
+                -moz-box-shadow: 0px 19px 30px -20px rgba(107, 104, 107, 1);
+                box-shadow: 0px 19px 30px -20px rgba(107, 104, 107, 1);
+                .ag-tabs-card {
+                    .card-head {
+                        background: $blue-light;
+                        color: $white;
+                        span {
+                            border: $blue-light;
+                            i {
+                                visibility: visible;
+                            }
+                        }
+                    }
+                    .card-body {
+                        li {
+                            strong {
+                                color: $blue-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .ag-tab-content {
+            margin-top: 50px;
+            position: relative;
+            #basic {
+                .ag-tab-pane {
+                    border-top: 4px solid $blue-light;
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 300px;
+                        top: 4px;
+                        width: 0;
+                        height: 0;
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        border-top: 20px solid $blue-light;
+                        background: $white;
+                        clear: both;
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        left: 300px;
+                        top: -3px;
+                        width: 0;
+                        height: 0;
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        border-top: 20px solid $white;
+                        clear: both;
+                    }
+                }
+            }
+            #premium {
+                .ag-tab-pane {
+                    border-top: 4px solid $blue-light;
+                    &::before {
+                        content: '';
+                        float: right;
+                        display: block;
+                        position: absolute;
+                        right: 300px;
+                        top: 4px;
+                        width: 0;
+                        height: 0;
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        border-top: 20px solid $blue-light;
+                        background: $white;
+                        clear: both;
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        float: right;
+                        position: absolute;
+                        right: 300px;
+                        top: -3px;
+                        width: 0;
+                        height: 0;
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        border-top: 20px solid $white;
+                        clear: both;
+                    }
+                }
+            }
+        }
+        
+        .tab-items-wrapper {
+            padding-top: 60px;
+            ul {
+                min-height: 100px;
+                -webkit-column-count: 4;
+                -moz-column-count: 4;
+                column-count: 4;
+                li {
+                    display: inline-block;
+                    font-weight: $font-weight-semi-bold;
+                    color: $grey-dark;
+                    padding-bottom: 20px;
+                    text-transform: capitalize;
+                    width: 100%;
+                    span {
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        padding: 1px 2px;
+                        background: $blue-light;
+                        margin-right: 0.7em;
+                        i {
+                            font-size: 12px;
+                            color: $white;
+                            margin-left: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .ag-get-start-wrapper {
+            padding-top: 40px;
+            .btn {
+                padding: 8px 32px;
+            }
+            .btn-font-large {
+                font-size: 1.6rem;
+                font-weight: $font-weight-semi-bold;
+                color: $white;
+            }
+            span {
+                font-size: 12px;
+                font-weight: $font-weight-semi-bold;
+                display: block;
+                padding-top: 10px;
+                font-style: italic;
+            }
+        }
+        
+        .ag-addons-wrapper {
+            padding: 30px 30px 10px 30px;
+            margin-top: 50px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-top: 1px solid $grey-lighter;
+            .addons-list-wrap {
+                ul {
+                    border: 1px solid $grey-light;
+                    background: $grey-lighter;
+                    padding: 20px;
+                    min-height: 120px;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    text-align: center;
+                    border-left: 6px solid $blue-light;
+                    transition: .4s;
+                    -webkit-transition: .4s;
+                    -moz-transition: .4s;
+                    -ms-transition: .4s;
+                    -o-transition: .4s;
+                    &:hover {
+                        transition: .4s;
+                        -webkit-transition: .4s;
+                        -moz-transition: .4s;
+                        -ms-transition: .4s;
+                        -o-transition: .4s;
+                        -webkit-box-shadow: 0px 0px 33px -28px rgba(102, 102, 102, 1);
+                        -moz-box-shadow: 0px 0px 33px -28px rgba(102, 102, 102, 1);
+                        box-shadow: 0px 0px 33px -28px rgba(102, 102, 102, 1);
+                        border-left-color: $green;
+                    }
+                    .wight-head {
+                        font-size: 16px;
+                        font-weight: $font-weight-bold;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+        
+        .ag-sales-support {
+            margin-top: 60px;
+            background: $grey-lighter;
+            min-height: 300px;
+            padding: 80px 0px;
+            .icons-sets {
+                padding: 0px 50px 50px 50px;
+                figure {
+                    span {
+                        display: block;
+                        padding-top: 10px;
+                        font-weight: $font-weight-semi-bold;
+                    }
+                }
+            }
+        }
+        
+        .ag-team-form-wrapper {
+            .bg-white {
+                position: relative;
+                min-height: 320px;
+                figure {
+                    img {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 330px;
+                    }
+                }
+            }
+            .support-team-form {
+                padding: 0px 100px;
+                .notice-text {
+                    padding: 0px 15px;
+                    font-size: 13px;
+                    line-height: 22px;
+                }
+                .btn-submit {
+                    padding-top: 10px;
+                    .btn {
+                        padding: 8px 32px;
+                    }
+                    .btn-font-large {
+                        font-size: 1.6rem;
+                        font-weight: $font-weight-semi-bold;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        
+        .ag-pricing-faq {
+            .faq-accordin-wrapper {
+                padding: 60px 0px;
+            }
+            .ag-faq {
+                padding-top: 30px;
+            }
+        }
+        
+        .heading-text {
+            h4,
+            h3,
+            h2 {
+                font-weight: $font-weight-bold;
+            }
+            text-align: center;
+            padding-bottom: 20px;
+            p {
+                font-size: 16px;
+                color: $dark-grey;
+            }
+        }
+        
+        .panel-group {
+            margin-bottom: 0px;
+            .panel {
+                border: 1px solid $grey-lighter;
+                border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -ms-border-radius: 8px;
+                -o-border-radius: 8px;
+                -webkit-box-shadow: -5px -11px 51px -21px rgba(173, 173, 173, 1);
+                -moz-box-shadow: -5px -11px 51px -21px rgba(173, 173, 173, 1);
+                box-shadow: -5px -11px 51px -21px rgba(173, 173, 173, 1);
+            }
+            .panel-heading {
+                cursor: pointer;
+                color: $grey-dark;
+                background: none;
+                border-bottom: none;
+                padding: 20px 15px;
+                .panel-title {
+                    font-size: 12px;
+                    font-weight: $font-weight-semi-bold;
+                }
+                .active-panel-title {
+                    color: $blue-light;
+                }
+                .inactive-panel-title {
+                    color: $grey-dark;
+                }
+            }
+            .panel-body {
+                padding-bottom: 40px;
+                p {
+                    font-size: 12px;
+                }
+            }
+            .panel-info>.panel-heading+.panel-collapse>.panel-body {
+                border: none;
+            }
+        }
+        
+        .panel-group .panel+.panel {
+            margin-top: -4px;
+        }
+        
+        #with-compare {
+            display: none;
+        }
+        
+        .compare-table {
+            margin-top: 40px;
+            border-top: 4px solid $blue-light;
+            padding: 30px 0px;
+            th {
+                text-transform: uppercase;
+            }
+            .feature-class {
+                display: block;
+                padding: 5px 0px;
+                td {
+                    border: none;
+                    width: 100%;
+                    color: $secondary-color;
+                    font-weight: $font-weight-semi-bold;
+                }
+            }
+            tr {
+                padding: 10px 0px;
+            }
+            .checked {
+                background: $green;
+                color: $white;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                padding: 5px 7px;
+                font-size: 12px;
+            }
+            .strong {
+                font-weight: $font-weight-semi-bold;
+            }
+            .table>tbody>tr>td,
+            .table>tbody>tr>th,
+            .table>tfoot>tr>td,
+            .table>tfoot>tr>th,
+            .table>thead>tr>td,
+            .table>thead>tr>th {
+                padding: 15px;
+            }
+            table tbody tr:nth-last-child(-n+30) {
+                display: none;
+            }
+            /* hide the checkbox that manipulates last table rows */
+            #showRetired {
+                display: none;
+                color: $white;
+            }
+            /* hide "hide" button */
+            #showRetired~#hideBtn {
+                display: none;
+            }
+            #showRetired:checked {
+                &+table tbody tr:nth-last-child(-n+30) {
+                    display: table-row;
+                }
+                /* change the buttons around */
+                &~#showBtn {
+                    display: none;
+                }
+                &~#hideBtn {
+                    display: inline;
+                }
+                &+table tbody .feature-class {
+                    display: block !important;
+                }
+            }
+            /* style buttons a little bit */
+            label[for='showRetired'] {
+                background: transparent;
+                cursor: pointer;
+                padding: 0px 10px;
+                position: relative;
+                text-align: center;
+                color: $blue-light;
+                font-weight: $font-weight-semi-bold;
+                span {
+                    padding-left: 10px;
+                }
+            }
+        }
+        
+        //responsive hidden divs
+        .ag-nav-tabs-small {
+            display: none;
+        }
+        
+        .ag-tab-content-card-small {
+            display: none;
+        }
+        
+        .view-features-small {
+            display: none;
+        }
+        
+        #showFeat {
+            display: none;
+        }
+        
+        @import"responsive";

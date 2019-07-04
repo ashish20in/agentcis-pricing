@@ -1,0 +1,156 @@
+@media (max-width: 480px) {
+    .ag-pricing {
+        padding-top: 8rem;
+    }
+    .ag-compare-plans {
+        .toggle-wrapper {
+            display: none;
+        }
+    }
+    .ag-plans-new {
+        .ag-nav-tabs {
+            display: none;
+        }
+    }
+    #without-compare {
+        .ag-tab-content {
+            margin-top: 0px;
+            #basic,
+            #premium {
+                .ag-tab-pane {
+                    border: none;
+                    &::after,
+                    &::before {
+                        border: none;
+                    }
+                }
+            }
+            .tab-items-wrapper {
+                // padding-top: 0px;
+                ul {
+                    padding: 0px 30px;
+                    column-count: 1;
+                    li:nth-child(n+7) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .icons-sets {
+        figure {
+            padding-bottom: 20px;
+        }
+    }
+    .ag-team-form-wrapper {
+        figure {
+            display: none;
+        }
+        .heading-text {
+            padding: 0px 15px;
+        }
+        .support-team-form {
+            padding: 0px 15px;
+        }
+    }
+    .ag-sales-support {
+        padding-top: 40px;
+    }
+    .ag-nav-tabs-small {
+        display: block;
+        margin-top: -80px;
+        .nav-pills>li {
+            background: none;
+            float: none;
+            display: inline-block;
+            zoom: 1;
+            a {
+                font-weight: $font-weight-semi-bold;
+                color: $dark-grey;
+                background: none;
+                padding: 10px 30px;
+            }
+        }
+        .nav-pills {
+            text-align: center;
+            position: relative;
+        }
+        .nav-pills>li.active>a,
+        .nav-pills>li.active>a:focus,
+        .nav-pills>li.active>a:hover {
+            color: $blue-light;
+            border-bottom: 5px solid $blue-light;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+            background: none;
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 40px;
+                margin-left: -15px;
+                width: 0;
+                height: 0;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-top: 15px solid $blue-light;
+                clear: both;
+            }
+        }
+    }
+    .ag-tab-content-card-small {
+        display: block;
+        .card-body {
+            background: $grey-lighter;
+            margin: 30px 25px 30px 25px;
+            border: 1px solid $grey-light;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            -webkit-box-shadow: 0px 28px 39px -22px rgba(171, 166, 171, 1);
+            -moz-box-shadow: 0px 28px 39px -22px rgba(171, 166, 171, 1);
+            box-shadow: 0px 28px 39px -22px rgba(171, 166, 171, 1);
+            .list-unstyled {
+                padding: 15px 0px;
+                li {
+                    padding-top: 5px;
+                    font-size: 12px;
+                    strong {
+                        font-weight: $font-weight-bold;
+                        font-size: 20px;
+                    }
+                }
+                .col-border {
+                    border-right: 1px solid $grey-light;
+                }
+            }
+            .badge {
+                background: lighten($green, 5%);
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+                padding: 5px 10px;
+                font-weight: $font-weight-bold;
+            }
+        }
+        .ag-row-auto {
+            .col-border {
+                border-right: 1px solid $grey-light;
+            }
+        }
+    }
+    .tab-items-wrapper {
+        padding-top: 0px;
+    }
+    .view-features-small {
+        display: block;
+    }
+}
